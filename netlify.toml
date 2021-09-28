@@ -1,0 +1,4 @@
+[build]
+  command   = "cargo build --release --bin lambda -Z unstable-options --out-dir target/functions"
+  publish   = "public/"
+  functions = "target/functions/"

@@ -1,0 +1,7 @@
+{
+  "editor.tabSize": 2,
+  "files.exclude": {
+    "target": true
+  },
+  "rust-analyzer.cargo.allFeatures": true
+}

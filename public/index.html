@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Sailfish OS Chum installation</title>
+
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <h1>Sailfish OS Chum installation</h1>
+
+  <ul>
+    <li>Enable "System → Security → Untrusted software → Allow untrusted software" in the device settings</li>
+    <li>Select the required configuration at this page</li>
+    <li>Download Chum RPM with the appeared link under the selection form</li>
+    <li>Tap the downloaded RPM in the device's "File downloaded" notification or in the file browser and confirm the installation</li>
+    <li>Optionally download and install Chum GUI</li>
+    <li>Optionally disable back the "Allow untrusted software"</li>
+  </ul>
+
+  <form>
+    <p>
+      <label>Sailfish OS version:
+        <select id="sfos" onchange="update()">
+          <option class="none" disabled selected value="none"> -- select an option -- </option>
+          <option value="4.2.0.21">4.2.0.21</option>
+          <option value="4.1.0.24">4.1.0.24</option>
+          <option value="4.0.1.48">4.0.1.48</option>
+          <option value="3.4.0.24">3.4.0.24</option>
+          <option value="3.3.0.16">3.3.0.16</option>
+          <option value="3.2.1.20">3.2.1.20</option>
+          <option value="3.1.0.12">3.1.0.12</option>
+        </select>
+      </label>
+    </p>
+
+    <p>
+      <label>Device architecture:
+        <select id="arch" onchange="update()">
+          <option class="none" disabled selected value="none"> -- select an option -- </option>
+          <option id="aarch64" value="aarch64">aarch64</option>
+          <option value="armv7hl">armv7hl</option>
+          <option value="i486">i486</option>
+        </select>
+      </label>
+    </p>
+  </form>
+
+  <p id="loading" hidden>Loading…</p>
+
+  <p>
+    <a id="chum-link" hidden></a>
+    <span id="no-chum-link" class="no-link" hidden>Chum RPM not found!</span>
+  </p>
+
+  <p>
+    <a id="chum-gui-link" hidden></a>
+    <span id="no-chum-gui-link" class="no-link" hidden>Chum GUI RPM not found!</span>
+  </p>
+
+</body>
+</html>

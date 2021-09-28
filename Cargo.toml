@@ -1,0 +1,60 @@
+cargo-features = ["strip"]
+
+[package]
+name        = "sailfishos-chum-web-lambda"
+description = ""
+version     = "0.1.0"
+edition     = "2018"
+repository  = ""
+authors     = [
+  "Petr Tsymbarovich <petr@tsymbarovich.ru"
+]
+
+[profile.release]
+lto   = true
+# Cannot strip all due to Netlify runtime detection mechanics
+# https://github.com/netlify/elf-cam/blob/820418876393d4b3e5e0a4591f2e28d864f8adfb/src/elf.rs#L25
+strip = "debuginfo"
+
+[[bin]]
+name              = "lambda"
+required-features = ["lambda"]
+
+[[bin]]
+name              = "server"
+required-features = ["server"]
+
+[features]
+default  = ["lambda"]
+lambda   = ["netlify_lambda_http", "aws_lambda_events"]
+server   = ["hyper/server"]
+
+[dependencies]
+flate2      = "1.0"
+http        = "0.2"
+roxmltree   = "0.14"
+serde_json  = "1.0"
+
+[dependencies.aws_lambda_events]
+version   = "0.4"
+optional  = true
+
+[dependencies.hyper]
+version   = "0.14"
+features  = ["client", "tcp", "http1", "http2"]
+
+[dependencies.hyper-tls]
+version   = "0.5"
+features  = ["vendored"]
+
+[dependencies.netlify_lambda_http]
+version   = "0.2"
+optional  = true
+
+[dependencies.serde]
+version   = "1.0"
+features  = ["derive"]
+
+[dependencies.tokio]
+version   = "1.12"
+features  = ["full"]

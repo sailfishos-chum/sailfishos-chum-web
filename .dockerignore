@@ -1,0 +1,7 @@
+# Ignore everything by default
+*
+
+# Allowed entries
+!src/
+!Cargo.toml
+rust-toolchain
