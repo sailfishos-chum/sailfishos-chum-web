@@ -22,36 +22,25 @@
     <li>Optionally disable back the "Allow untrusted software"</li>
   </ul>
 
-  <form>
+  <form id="form" hidden>
     <p>
       <label>Sailfish OS version:
-        <select id="sfos" onchange="update()">
-          <option class="none" disabled selected value="none"> -- select an option -- </option>
-          <option value="4.3.0.12">4.3.0.12</option>
-          <option value="4.2.0.21">4.2.0.21</option>
-          <option value="4.1.0.24">4.1.0.24</option>
-          <option value="4.0.1.48">4.0.1.48</option>
-          <option value="3.4.0.24">3.4.0.24</option>
-          <option value="3.3.0.16">3.3.0.16</option>
-          <option value="3.2.1.20">3.2.1.20</option>
-          <option value="3.1.0.12">3.1.0.12</option>
+        <select id="sfos" onchange="onsfos()">
+          <option class="none" disabled value="none"> -- select an option -- </option>
         </select>
       </label>
     </p>
 
-    <p>
+    <p id="arch-container" hidden>
       <label>Device architecture:
-        <select id="arch" onchange="update()">
-          <option class="none" disabled selected value="none"> -- select an option -- </option>
-          <option id="aarch64" value="aarch64">aarch64</option>
-          <option value="armv7hl">armv7hl</option>
-          <option value="i486">i486</option>
+        <select id="arch" onchange="onarch()">
+          <option class="none" disabled value="none"> -- select an option -- </option>
         </select>
       </label>
     </p>
   </form>
 
-  <p id="loading" hidden>Loading…</p>
+  <p id="loading">Loading…</p>
 
   <p>
     <a id="chum-link" hidden></a>
