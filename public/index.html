@@ -16,9 +16,12 @@
   <ul>
     <li>Enable "System → Security → Untrusted software → Allow untrusted software" in the device settings</li>
     <li>Select the required configuration at this page</li>
-    <li>Download Chum RPM with the appeared link under the selection form</li>
+    <li>Download the required RPM with the appeared link under the selection form:</li>
+    <ul>
+      <li><b>sailfishos-chum-gui</b> for the Chum GUI client</li>
+      <li><b>sailfishos-chum</b> for the Chum repository with no GUI client</li>
+    </ul>
     <li>Tap the downloaded RPM in the device's "File downloaded" notification or in the file browser and confirm the installation</li>
-    <li>Optionally download and install Chum GUI</li>
     <li>Optionally disable back the "Allow untrusted software"</li>
   </ul>
 
@@ -43,13 +46,13 @@
   <p id="loading">Loading…</p>
 
   <p>
-    <a id="chum-link" hidden></a>
-    <span id="no-chum-link" class="no-link" hidden>Chum RPM not found!</span>
+    <a id="chum-gui-link" hidden></a>
+    <span id="no-chum-gui-link" class="no-link" hidden>Chum GUI RPM not found!</span>
   </p>
 
   <p>
-    <a id="chum-gui-link" hidden></a>
-    <span id="no-chum-gui-link" class="no-link" hidden>Chum GUI RPM not found!</span>
+    <a id="chum-link" hidden></a>
+    <span id="no-chum-link" class="no-link" hidden>Chum RPM not found!</span>
   </p>
 
 </body>
