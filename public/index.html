@@ -4,30 +4,30 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Sailfish OS Chum installation</title>
+  <title>SailfishOS:Chum installation</title>
 
   <link rel="stylesheet" type="text/css" href="index.css">
   <script src="index.js"></script>
 </head>
 
 <body>
-  <h1>Sailfish OS Chum installation</h1>
+  <h2>SailfishOS:Chum installation</h2>
 
-  <ul>
-    <li>Enable "System → Security → Untrusted software → Allow untrusted software" in the device settings</li>
-    <li>Select the required configuration at this page</li>
-    <li>Download the required RPM with the appeared link under the selection form:</li>
+  <ol>
+    <li>Enable "System → Security → Untrusted software → Allow untrusted software" in the Settings app on your Sailfish&nbsp;OS device.</li>
+    <li>Select the correct configuration for your device at this page.</li>
+    <li>Then download one of the RPMs via the links which are displayed under the selection form:</li>
     <ul>
-      <li><b>sailfishos-chum-gui</b> for the Chum GUI client</li>
-      <li><b>sailfishos-chum</b> for the Chum repository with no GUI client</li>
+      <li><b>sailfishos-chum-gui</b> for the SailfishOS:Chum GUI-client</li>
+      <li><b>sailfishos-chum</b> for a helper RPM, which solely provides an appropriate local repository configuration for utilising SailfishOS:Chum with command line tools as pkcon or zypper</li>
     </ul>
-    <li>Tap the downloaded RPM in the device's "File downloaded" notification or in the file browser and confirm the installation</li>
-    <li>Optionally disable back the "Allow untrusted software"</li>
-  </ul>
+    <li>Tap on the downloaded RPM at "File downloaded" notification on your device or in the file browser and confirm the installation.</li>
+    <li>Preferably disable the "Allow untrusted software" setting again.</li>
+  </ol>
 
   <form id="form" hidden>
     <p>
-      <label>Sailfish OS version:
+      <label>Sailfish&nbsp;OS version:
         <select id="sfos" onchange="onsfos()">
           <option class="none" disabled value="none"> -- select an option -- </option>
         </select>
@@ -47,12 +47,12 @@
 
   <p>
     <a id="chum-gui-link" hidden></a>
-    <span id="no-chum-gui-link" class="no-link" hidden>Chum GUI RPM not found!</span>
+    <span id="no-chum-gui-link" class="no-link" hidden>RPM for SailfishOS:Chum GUI-client not found!</span>
   </p>
 
   <p>
     <a id="chum-link" hidden></a>
-    <span id="no-chum-link" class="no-link" hidden>Chum RPM not found!</span>
+    <span id="no-chum-link" class="no-link" hidden>RPM for SailfishOS:Chum repository configuration only not found!</span>
   </p>
 
 </body>
