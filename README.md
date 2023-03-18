@@ -1,2 +1,2 @@
-# sailfishos-chum-web
-targeting https://chumrpm.netlify.app/
+# SailfishOS:Chum Web
+Targeting https://chumrpm.netlify.app/
