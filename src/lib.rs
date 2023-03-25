@@ -231,7 +231,7 @@ impl Handler {
               };
               match name.text() {
                 Some(n) if n == "sailfishos-chum-repo-config" => chum = get_url(),
-                Some(n) if n == "sailfishos-chum-gui" => gui  = get_url(),
+                Some(n) if n == "sailfishos-chum-gui"         => gui  = get_url(),
                 _ => ()
               }
             }
