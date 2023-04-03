@@ -21,14 +21,14 @@
       <li><b>sailfishos-chum-gui</b> for the SailfishOS:Chum GUI application<br />
         References: <a href="https://github.com/sailfishos-chum/sailfishos-chum-gui">Source code repository</a> and <a href="https://build.sailfishos.org/package/show/sailfishos:chum/sailfishos-chum-gui">OBS build entry</a>
       </li>
-      <li><b>sailfishos-chum</b> for a helper RPM, which solely provides an appropriate local repository configuration for utilising the SailfishOS:Chum community repository with command line tools as pkcon or zypper.<br />
+      <li><b>sailfishos-chum-repo-config</b> for a helper RPM, which solely provides an appropriate local repository configuration for utilising the SailfishOS:Chum community repository with command line tools as pkcon or zypper.<br />
         References: <a href="https://github.com/sailfishos-chum/sailfishos-chum-repo-config/blob/main/rpm/sailfishos-chum-repo-config.spec">Source code</a> and <a href="https://build.sailfishos.org/package/show/sailfishos:chum/sailfishos-chum-repo-config">OBS build entry</a>
       </li>
       <li>Note that the SailfishOS:Chum GUI application provides the same local repository configuration, while also providing a GUI app, which can be used in addition to pkcon or zypper. Furthermore it offers easy switching between the regular SailfishOS:Chum repository and the SailfishOS:Chum testing repository.<br />
-        Hence you might rather install the sailfishos-chum-gui RPM instead of the sailfishos-chum RPM.
+        Hence you might rather install the sailfishos-chum-gui RPM instead of the sailfishos-chum-repo-config RPM.
       </li>
     </ul>
-    <li>Tap on the downloaded RPM file via the "File downloaded" notification or in the file browser, then confirm the installation.</li>
+    <li>Tap on the downloaded RPM file via the "File downloaded" notification or in a file browser, then confirm the installation.</li>
     <li>Preferably disable the "Allow untrusted software" setting again.</li>
   </ol>
 
@@ -58,7 +58,7 @@
       <span id="no-chum-gui-link" class="no-link" hidden>RPM for the SailfishOS:Chum GUI application not found!</span>
     </li>
     <li>
-      <b>sailfishos-chum</b>: <a id="chum-link" hidden></a>
+      <b>sailfishos-chum-repo-config</b>: <a id="chum-link" hidden></a>
       <span id="no-chum-link" class="no-link" hidden>RPM solely for the SailfishOS:Chum local repository configuration not found!</span>
     </li>
   </ul>
