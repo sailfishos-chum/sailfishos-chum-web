@@ -1,2 +1,2 @@
 # SailfishOS:Chum Web
-Targeting https://chumrpm.netlify.app/
+SailfishOS:Chum webpage for downloading the SailfishOS:Chum GUI app or the SailfishOS:Chum repo config RPM, targeting [https://chumrpm.netlify.app/](https://chumrpm.netlify.app/).
